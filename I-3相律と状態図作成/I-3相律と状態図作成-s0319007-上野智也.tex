@@ -1,0 +1,395 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{ピクチャ/}}
+\usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb}
+\begin{document}
+
+\title{\huge I-3 相律と状態図作成}
+\date{}
+\maketitle
+
+\begin{flushright}
+\vspace{11cm}\Large
+学籍番号：s0319007\\
+氏名:上野智也\\
+共同実験者：荒巻俊太　
+五十嵐武\\伊藤絵美里　伊藤優希\\伊藤龍平　上野健斗\\片野峻太郎　川瀬悠太\\水島悠人\\
+実験実施日：2021/7/1\\
+レポート提出日:2021/7/4
+\end{flushright}
+
+\thispagestyle{empty}
+
+\newpage
+
+\section{目的}
+
+組成の異なる6種類のPb-Sn合金の熱分析実験を行い、その共晶系状態図の一部を作成する。
+
+\section{原理}
+
+\subsection{Gibbsの相律}
+
+$n元系の中に、r種類の層が存在し、系が熱平衡状態にあるとき、自由に変化できる示強性の量の数fは、$
+
+\begin{equation}
+  f=n-r+2
+\end{equation}
+
+で表される。$f$を自由度という。
+
+金属及び合金の液相と固相を取り扱う場合、通常我々が対象とする問題においては、圧力は1気圧付近で、また、液体及び固体の場合には、僅かの圧力の変化は平衡にほとんど影響しないため、多くの場合、圧力を定数として考え、自由度$f$は以下のようにあらわされる
+
+\begin{equation}
+  f=n-r+1
+\end{equation}
+
+\subsection{金属の冷却曲線}
+
+単相の金属(合金も含む)を自然冷却下に置き、その液体が凝固して固体になり、すべての相転移が完了するまで冷却する。その時の温度変化を時間の関数としてプロットすると、相転移の開始点、終了点で曲線の勾配が不連続になる(曲線が折れ曲がる)のが観察できる。ここで、図1に示すような状態図を有する共晶系合金の各成分での冷却曲線について考察する。図1において曲線CE,DEは液相線、曲線CF,DEは液相線、曲線CF,DGは固相線、水平直線FEGは共晶反応線、点Eは共晶点、曲線FH,GIは溶解度曲線という。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{zu1.jpg}
+\caption{共晶系合金の状態図}
+\end{figure}%
+
+(a)組成A
+
+図2に示すように、液体の状態から金属Aの融点$T_A$までは単調に温度は降下する(a$\to$ b)。
+
+温度$T_A$では液相内に固相の核が発生して成長する。凝固を開始してから終了するまでの間は、固相と液相の2相が共存する。また、単体金属であるから成分数は1である。よって(2)式に$N=1,r=2$を代入すると、
+
+\begin{center}
+
+$f=1-2+1=0$
+
+\end{center}
+
+であり、温度が一定に保たれることになる。すなわち、冷却曲線に水平部(b$\to$c)が生じる。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{a.jpg}
+\caption{組成Aの冷却曲線}
+\end{figure}%
+
+(b)組成X
+
+組成Xのように共晶反応線と交わらない組成の場合、冷却曲線は図3のようになる。単体金属の場合と同じく、液相線CEと交わる温度$T_2$までは温度は単調に降下する(a$\to$b)が、$T_2$からは、液相中に固相α相が生成して、凝固潜熱が発生するために降温速度が小さくなる。この時の成分数$nは$AとBで2,相数$r$は液相と固相で2なので、自由度は
+
+\begin{center}
+
+$f=2-2+1=1$
+
+\end{center}
+
+であり、温度は一定にはならない。結局、冷却曲線は$T_2$で折れ曲がり、固相線CFと交わる温度、$T_4$までの、液相Lと固相αの共存領域では上に凸の曲線(b$\to$c)となる。
+
+温度$T_4$に達した後、温度はしばらく単調に降下する(c$\to$d)。さらに低温になると、溶解度曲線FHを通過し、α相内にβ相が析出し始める。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{x.jpg}
+\caption{組成Xの冷却曲線}
+\end{figure}%
+
+(c)組成Y
+
+図4に示すように、液相線CEを通過したあとは固相α相と液相が共存し、上に凸の曲線になる。ここまでは組成Xと同じだが、組成Yの場合には共晶温度$T_E$に達すると共晶反応線FEと交わる。この時点で、液相内に固相α相と固相β相が同時に生成するL$\to$α+βという共晶反応が起きる。この時の成分数$n$は前と同じくAとBで2,相数$r$は液相と固相αとβの3である。したがって、自由度$f$は
+
+\begin{center}
+
+$f=2-3+1=0$
+
+\end{center}
+
+となり、温度は一定となる。すなわち、冷却曲線に水平部(c$\to$d)が生じる。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{y.jpg}
+\caption{組成Yの冷却曲線}
+\end{figure}%
+
+(d)組成Z
+
+この組成では、共晶温度$T_E$に達するまで固相は晶出せず、$T_E$ではじめて共晶反応によって固相α相と固相β相が発生する。この時も組成Yの共晶反応と同様、温度は変化せず、冷却曲線に水平部が生じる(b$\to$c)。したがって組成Zでは組成Aと同じような形の冷却曲線となる。（図5）
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{z.jpg}
+\caption{組成Zの冷却曲線}
+\end{figure}%
+
+\section{実験方法}
+
+\subsection{実験装置}
+
+図6に示すように、装置はタンマン管に入れた金属を融解する電気炉、温度を測定するための熱電対K及び冷接点、熱電対からなるデジタルボルトメーター、パーソナルコンピュータ(PC)からなる。PCはGP-IBを介してデジボルと交信しあい、受けとった起電力を温度に換算し画面上に表示する。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6cm]{souti.jpg}
+\caption{熱分析実験装置}
+\end{figure}%
+
+\subsection{実験方法}
+
+(a)Pb-Sn共晶系合金の状態図を図7に示す。本実験で熱分析を行う組成は表1に示すような6種類の組成である。所定の組成となるように直視天秤で正確にPbとSnを秤量する。
+
+\begin{table}[h]
+  \centering
+    \caption{実験で用いるPb-Sn合金の組成}
+    \begin{tabular}{|r|r|r|r|r|r|r|} \hline
+    
+     & 試料1 & 試料2 & 試料3 & 試料4 & 試料5 & 試料6 \\ \hline
+$C_{pb}$/wt \% & 0 & 20 & 38.1 & 70 & 90 & 100 \\ \hline
+$C_{Sn}$/wt \% & 100 & 80 & 61.9 & 30 & 10 & 0 \\ \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6cm]{zu7.jpg}
+\caption{Pb-Sn共晶系状態図}
+\end{figure}%
+
+(b)冷接点に氷水を入れ、図6のように配線する。電気炉に電流を流して、温めておく。
+
+(c)各組成の合金をそれぞれ別のタンマン管で、温度に注意しながら電気炉内で融解加熱する。温度はデジボルの起電力や、PCの画面の表示から知ることができる。金属が完全に融け、状態図上の液相線との交点よりもある程度(50～100度)以上高温になったら、タンマン管を電気炉から取り出して、空冷用の容器の中に立てて安置する。
+
+(d)冷却曲線の記録を開始する。PCのファンクションキーを押し、画面上にグラフが赤い線で描かれ始めるのを確認する。PCで動作しているプログラムは0.5秒おきにデジホルに「データを転送せよ」との命令を送り、そのたびごとに転送されてくるデータ(起電力)を温度に換算している。
+
+(e)測定するべき温度をすべて通過し、充分温度が下がったらPCのファンクションキーを押して記録を終了する。動作中の冷却曲線測定用のプログラムを終了させ、ついでにN-Graphを立ち上げ、冷却曲線の測定結果を縦軸が温度、横軸が時間のグラフにし、それをプリントアウトする。
+
+\section{結果の整理}
+
+\subsection{測定したグラフからPb-Sn共晶系状態図を作成}
+
+測定したグラフを以下に示す
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.3\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{img001.jpg}
+    \caption{試料1のグラフ}
+  \end{minipage}
+  \begin{minipage}{0.3\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{img002.jpg}
+    \caption{試料2のグラフ}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.3\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{img003.jpg}
+    \caption{試料3のグラフ}
+  \end{minipage}
+  \begin{minipage}{0.3\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{img004.jpg}
+    \caption{試料4のグラフ}
+  \end{minipage}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.3\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{img005.jpg}
+    \caption{試料5のグラフ}
+  \end{minipage}
+  \begin{minipage}{0.3\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{img006.jpg}
+    \caption{試料6のグラフ}
+  \end{minipage}
+\end{figure}
+
+・重量パーセントから原子パーセントへの変換
+
+重量パーセントから原子パーセントへと変換する。重量パーセントを$C_1,C_2、原子パーセントをC'_1,C'_2
+それぞれの原子量をA_1,A_2$とすると、変換の式は以下のようになる
+
+\begin{equation}
+ C'_1=\frac{C_1A_2}{C_1A_2+C_2A_1}\times 100
+\end{equation}
+
+\begin{equation}
+ C'_2=\frac{C_2A_1}{C_2A_1+C_1A_2}\times 100
+\end{equation}
+
+$C_{Sn},C_{Pb}$をそれぞれSn,Pbの重量パーセント、$C'_{Sn},C'_{Pb}$をそれぞれSn,Pbの原子パーセント、$A_{Sn},A_{Pb}$をそれぞれSn,Pbの原子量とする。ここで、$A_{Sn}=119,A_{Pb}=207$とする。
+
+表1の重量パーセントから原子パーセントに変換したものが下表
+
+\begin{table}[h]
+  \centering
+    \caption{原子パーセントでのPb-Sn合金の組成}
+    \begin{tabular}{|r|r|r|r|r|r|r|} \hline
+     & 試料1 & 試料2 & 試料3 & 試料4 & 試料5 & 試料6 \\ \hline
+$C_{Pb}$/at\% & 0 & 12.6 & 26.1 & 57.3 & 83.8 & 100 \\ \hline
+$C_{Sn}$/at\% & 100 & 87.4 & 73.9 & 42.7 & 16.2 & 0 \\ \hline
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+結果のグラフと原子パーセントでのPb-Sn合金の組成から状態図を作成すると以下のようになる。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{zu8.jpg}
+\caption{実験結果からわかるPb-Sn状態図}
+\end{figure}%
+
+\newpage
+
+\subsection{課題}
+
+(a)過冷却が起きる原因と防ぐ方法
+
+まず、過冷却が起きる原因は、ゆっくりと冷却した際に反応の核が生成されにくく、相転移しにくいため起こる。
+
+
+過冷却を防ぐには反応の核が形成されやすいようにしてやればよく、例えば冷却している物質をかき混ぜる事が挙げられる。
+
+(b)Constitutional Supercoolingの原因
+
+A,Bを純金属とする。冷却速度が高いとき、液相内においても成分金属濃度が不均一を生じる。すなわち、図15,16からわかるように組成Xの合金が温度$T_2$
+において凝固開始するとき、液相$L_2$よりもB金属濃度の低い固相$S_2$を生ずるので、液相内のB金属濃度は固相表面からの距離に対して図17のように勾配を生じている。したがって、液相線温度$T_L$が同図18のように固相表面近傍では低下している。そこで、実際の温度$T$が図中に示したような勾配を持っているとすれば、固相表面から$P$までの範囲では過冷却されているということになる。これをConstitutional Supercoolingという。すなわちConstitutional Supercoolingの原因は冷却速度が速いときの液相の成分金属不均一。
+
+\newpage
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{zu9.jpg}
+    \caption{合金ABの状態図1}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{zu10.jpg}
+    \caption{合金ABの状態図2}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{zu11.jpg}
+    \caption{B金属濃度-固相表面からの距離}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{zu12.jpg}
+    \caption{温度-固相表面からの距離}
+  \end{minipage}
+\end{figure}
+
+\newpage
+
+(c)今回の実験で行ったそれぞれの組成で凝固組成はどのようなものになるか
+
+Lを液相、α,βを固相とすると、以下の図のようになると考えられる。
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{z1.jpg}
+    \caption{試料1の組成での凝固組織}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{z2.jpg}
+    \caption{試料2の組成での凝固組織}
+  \end{minipage}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{z3.jpg}
+    \caption{試料3の組成での凝固組織}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{z4.jpg}
+    \caption{試料4の組成での凝固組織}
+  \end{minipage}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{z5.jpg}
+    \caption{試料5の組成での凝固組織}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{z6.jpg}
+    \caption{試料6の組成での凝固組織}
+  \end{minipage}
+\end{figure}
+
+\newpage
+
+\section{考察}
+
+試料3の冷却曲線(図10)で過冷却が確認できる。この過冷却の原因はかき混ぜ不足や縦にかき混ぜていたことが考えられる。
+
+完全な組成図を作りたい時は、今回の実験に加えて、1.45at\%Pb,71at\%Pb,93at\%Pb,96.8at\%Pbでの実験を行えばよい。
+
+図14から今回の実験で分かったのは、26.1at\%Pb上で冷却すると、液相から固相が二つ出てくる（共晶反応）。すなわち、この点が不変点だと考えられる。
+
+不変点での共晶反応は以下のように書ける。
+
+\begin{center}
+
+$L(26.1at\%Pb) \rightleftarrows α(1.45at\%Pb)+β(71at\%Pb)$
+
+\end{center}
+
+ただし、右向きの反応が冷却で、左向きの反応が加熱である。
+
+
+
+\begin{thebibliography}{9}
+\item W.D.キャリスター著　入戸野修訳　材料の科学と工学1 材料の微細構造　2002年　培風館
+  
+\item 阿部秀夫著　金属組織学序論　1967年　コロナ社
+  
+\end{thebibliography} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

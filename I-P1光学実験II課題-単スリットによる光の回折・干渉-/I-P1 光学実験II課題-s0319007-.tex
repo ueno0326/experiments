@@ -1,0 +1,159 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{ピクチャ/}}
+\usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
+\begin{document}
+
+\begin{itemize}
+\item 課題
+\end{itemize}
+
+(1)誘導放出の原理について
+
+物質は各種元素の原子の組み合わせにより構成され、原子は原子核の周りを電子がまわっている構造である。電子がどこに存在するかによって原子のエネルギーの大きさ（エネルギー準位）が異なり、外側の電子軌道に電子が存在する場合ほどエネルギー準位が高い（つまり、原子のエネルギーが大きい）電子が通常の安定な電子軌道に存在するときを基底状態という。原子にエネルギーを与えて電子がエネルギー準位の高い軌道に移った状態を励起状態という。一般に励起状態のエネルギー準位は複数存在する(図1)。そして、通常は、基底状態にある原子が圧倒的に多く、励起状態にある原子はエネルギー準位に対して、指数関数的に減少する。(図2)
+
+励起状態にある原子は不安定で、励起電子は時間がたつと自然に基底状態に戻り、その時に光子1個分のエネルギー$h\nu$を光をして放出する。励起電子が自然に基底状態に戻り、光子を発する現象を自然放出という。光子が原子の並んだ物質中を進むとき、基底状態の原子と会うと、その原資の外殻原子はその光子を得て励起状態へと遷移する。
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{energy.jpg}
+    \caption{基底状態と励起状態}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+    \centering
+    \includegraphics[width=\columnwidth]{graph.jpg}
+    \caption{通常時の原子数の分布}
+  \end{minipage}
+\end{figure}
+
+
+一方、光子が励起状態の原子と出会うと、その原子の励起電子は光子を放出（発行）して基底状態に遷移する。すなわち、励起状態の原子に光子が作用すると、光子が誘導的に放出されて一つ増え、作用して光子と共に進行する。この現象を誘導放出という。
+励起された原子が多数あれば誘導放出が次々起こり、同じエネルギーで同じ方向に進む光子がどんどん増える。（誘導放出による光増幅。図3）
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{electron.jpg}
+\caption{誘導放出の連鎖による光増幅}
+\end{figure}%
+
+誘導放出の連鎖による光増幅はレーザーに応用されている。そもそも、レーザー(LASER)は''Light Amplification by Stimulated Emission of Radio''といい、直訳すると「放射の誘導放出による光増幅」という意味である。
+\newpage
+（２）Photo Diodeについて
+
+半導体中にP-N接合が形成されている場合、入射光子のエネルギーにより励起されて生じた電子・正孔はP-N接合の両端に集まり、外部回路が開いているとそこに電圧を発生する。この現象を光起電力効果といい、この効果を利用した光検出器をフォトダイオードという。材料がシリコンでできているものが多く、この場合シリコンフォトダイオードという。回路が閉じているとそこに光電流が生じ、回路に負荷抵抗があると電圧降下により電圧を生じる。シリコンフォトダイオードの動作を示す構造図を図4に示す。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{photodiode.jpg}
+\caption{シリコンフォトダイオードの構造}
+\end{figure}%
+
+光起電力効果を利用した素子は光電面より光電子を取り出す時の障壁がないため光電子は効率よく集められ、高い量子効率を示す。フォトトランジスタ、アバランシェ・フォトダイオードなどはこの効果を利用した物である。材料としてはSi,GaAsP等が使用され、材料固有のバンドギャップにより、長波長端のしゃ断波長が決定される。GaAsPはバンドギャップが1.8eVと大きいため長波長端側の感度は抑圧され、カットオフは700nmである。比較的大きな受光面積を得られること、幅の狭い素子を多数並べたアレイ状の素子が得られる事も一つの特徴。
+
+フォトダイオードの応答時間は接合容量により支配される。すなわち発生した光電子が接合容量に蓄積されて出力電圧を発生するのであるが、この容量は通常のフォトダイオードで数百～数千nF（受光面積に比例）あり、立ち上がりが遅くなる。P層とN層の間に比抵抗の非常に高い層を挿入したPIN型フォトダイオードは接合容量が小さく、また逆方向のバイアス電圧を印加すると接合容量はさらに小さくなり、数十pFとなる。PIN型フォｔダイオードの立ち上がり時間は数十Vの印加電圧で数nsである。
+
+通常のシリコン・フォトダイオードは光入射側のP層の厚さのため光が吸収されて紫外線の感度は低下する。反転層型では基盤にP型半導体を使い、光入射側に非常に薄いN層を形成し、その上を紫外透過性のあるSiO$_2$の保護膜で覆っていて、200nm程度までの紫外光に感度を有する。ショットキ型はN型半導体表面に金の薄膜を蒸着して電極とし、金属-半導体間のショットキ効果P-N接合を形成したフォトダイオード。表面より接合部までが薄いため、200nm程度までの紫外光に感度を持つ。
+
+\newpage
+(3)光の透過強度の式の導出
+
+問題1
+
+スリットを通る前の光は、平行光で同位相であり、以下のように表されるとする。
+
+$\displaystyle \psi(x)=A_0\sin(2\pi{t}/T)=A_0\sin\omega{t}$
+
+$A_0$は振幅、tは時刻(sec)、Tは周期(sec)、$\omega　は角振動数(sec^{-1})$
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{nsuritto.jpg}
+\caption{$N$本のスリットで回折された光の干渉}
+\end{figure}%
+
+図5に示すように距離$d$で等間隔に並ぶ$N$本のスリットを光が通過すると仮定したとき、スリットから$l$だけ離れたスクリーンでは、角度$\theta$で回折された光の干渉パターンが観察される。スクリーンで観察されるスリット$N$本によって干渉された角度$\theta$方向の振幅$A(\theta)$の大きさを導出せよ。 
+
+　　
+
+多重スリットの光路差は$d\sin \theta$なので位相差$\delta$は、$\displaystyle \delta =\frac{光路差}{\lambda}\times{2\pi}
+=\frac{2\pi d\sin\theta}{\lambda}$
+
+今回は明線を調べるので、$(光路差)=m\lambda$から、$\displaystyle \delta=\frac{2\pi d\sin\theta}{\lambda}=2m\lambda$　ただし$m$は正の整数
+
+スリット通過後の光は以下の式で表される。
+
+$\displaystyle \psi=A_0\sin({\omega}t+\delta)$　　　ただし、$\delta$は位相差
+
+\begin{equation}
+重ね合わせの原理より　　\displaystyle \Psi=\sum_{k=0}^{N-1} A_{0}\sin(\omega{t}+k\delta)
+\end{equation}
+
+ここで、(1)式の両辺に$\displaystyle \sin \frac{\delta}{2}$を掛けると
+$\displaystyle \Psi \sin \frac{\delta}{2} =\sum_{k=0}^{N-1} A_{0} \sin(\omega{t}+k\delta) \sin \frac{\delta}{2}$
+
+$\displaystyle \Psi \sin \frac{\delta}{2}=
+\sin(\omega{t})\sin \frac{\delta}{2}+\sin(\omega t+\delta)\sin \frac{\delta}{2}+...+\sin(\omega t+(N-1)\delta)
+\sin \frac{\delta}{2}$
+
+上式右辺の$\sin(\omega{t}+k\delta) \sin \frac{\delta}{2}$に、
+$\displaystyle　\sin{\alpha}\sin{\beta}=-\frac{1}{2}(\cos(\alpha+\beta)-\cos(\alpha-\beta))$を使うと
+
+$\displaystyle　\Psi \sin \frac{\delta}{2}=-\frac{A_0}{2}[\cos(\omega t+\frac{\delta}{2})-\cos(\omega t-\frac{\delta}{2})
++\cos(\omega t+\frac{3\delta}{2})-\cos(\omega t+\frac{\delta}{2})+...+
+\cos\{\omega t+(N-\frac{1}{2})\delta\}\\-\cos\{\omega t+(N-\frac{3}{2})\delta\}$]
+
+$\displaystyle　=-\frac{A_0}{2}[\cos\{\omega t+(N-\frac{1}{2})\delta\}-\cos(\omega t+\frac{\delta}{2})]$
+\newpage
+
+最後の式に$\displaystyle　\cos{A}-\cos{B}=-2\sin{\frac{A+B}{2}} \sin{\frac{A-B}{2}}$を用いると
+
+$\displaystyle　\Psi \sin \frac{\delta}{2}=A_0\sin \frac{N\delta}{2} \sin(\omega t +\frac{N-1}{2} \delta)$
+
+$\displaystyle　\Psi=\frac{A_0\sin \frac{N\delta}{2}}{\sin \frac{\delta}{2}} \sin(\omega t+\frac{N-1}{2} \delta)$
+
+したがって、求める振幅$A(\theta)$は$\displaystyle　A(\theta)=A_0\frac{\sin \frac{N\delta}{2}}{\sin \frac{\delta}{2}}$
+ただし、$\displaystyle \delta=\frac{2\pi d\sin\theta}{\lambda}$
+
+　　　　
+
+問題2
+
+一本のスリットだけが開いているとき、スクリーンにおける投下強度を求める式が$\displaystyle I_0(\theta)=I_0(0)(\frac{\sin \beta}{\beta})^2$で表されることを示せ。ただし、$I_0(\theta)$は一本のスリットだけが開いている場合に観測される光の強度分布$I_0(0)$
+は一本のスリットの直進方向の光の強度、$\displaystyle \beta=\frac{\pi W\sin \theta}{\lambda}$、$W$はスリット幅で$W=Nd$
+
+　　　　
+
+強度は振幅の二乗なので、$\displaystyle |A(\theta)|^2=|A_0\frac{\sin \frac{N\delta}{2}}{\sin \frac{\delta}{2}}|^2
+=(NA_0)^2|\frac{\sin \frac{N\delta}{2}}{N\sin \frac{\delta}{2}}|^2$
+
+$\displaystyle \frac{\delta}{2}$が充分小さいとすると$\displaystyle \sin \frac{\delta}{2} \simeq \frac{\delta}{2}$
+で$\displaystyle N\frac{\delta}{2}=\frac{\pi Nd\sin \theta}{\lambda}=\frac{\pi W\sin \theta}{\lambda}=\beta$
+
+$\displaystyle |A(\theta)|^2=(NA_0)^2(\frac{\sin \beta}{\beta})^2$
+
+ここで式(1)について、$\displaystyle \delta=2m\lambda$で、$\displaystyle \sin(\theta +2m\pi)=\sin \theta$より　　
+$\displaystyle \Psi=NA_0\sin \omega t$となる。
+
+$m=0$で一本のスリットの直進方向の光の場所となる。
+
+したがって、最も明るい場所の振幅は$NA_0$で、強度は振幅の二乗なので、$(NA_0)^2$
+
+$I_0(\theta)=|A(\theta)|^2$、$I_0(0)=(NA_0)^2$とすると$\displaystyle I_0(\theta)=I_0(0)(\frac{\sin \beta}{\beta})^2$が得られる。
+
+
+
+
+\newpage
+\begin{thebibliography}{9}
+\item
+  堀内敏行 「光技術入門　第二版」
+  東京電機大学出版局　2014
+\item
+  吉澤徹　「光技術応用システム」
+  昭晃堂 1983
+\end{thebibliography}    
+
+\end{document}

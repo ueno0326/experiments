@@ -1,0 +1,338 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{ピクチャ/}}
+\usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
+\begin{document}
+
+\title{\huge I-4 材料強度試験I 弾性変形}
+\date{}
+\maketitle
+
+\begin{flushright}
+\vspace{10cm}\Large
+学籍番号：s0319007\\
+氏名:上野智也\\
+共同実験者：荒巻俊太　
+五十嵐武\\伊藤絵美里　伊藤優希\\伊藤龍平　上野健斗\\片野峻太郎　川瀬悠太\\水島悠人　小野寺晴海\\
+実験実施日：2021/5/12\\
+レポート提出日:2021/5/21
+\end{flushright}
+
+\thispagestyle{empty}
+
+\newpage
+\section{目的}
+
+軟鋼とアルミニウム合金の引張試験片にひずみゲージを張り付け、引張試験によりヤング率$E$とポアソン比$\nu$を測定
+
+\section{原理}
+
+物体にある一定方向に大きさが$\sigma$の応力が生じるように張力（圧力）を加えると、弾性範囲内ではその方向のひずみ
+$\varepsilon は\sigma $に比例する。これをフックの法則という。
+
+\begin{equation}
+\frac{\sigma}{\varepsilon}=E
+\end{equation}
+
+比例定数Eがヤング率または縦弾性定数。
+
+物体をある方向に向かって引っ張り、伸ばすと、それと垂直な方向に物体は縮む。逆に圧縮すると、圧縮された方向に垂直に伸びる。
+力を加える方向のひずみを$\varepsilon_l それと垂直な方向のひずみを\varepsilon_d　とすると（縮みの時は\varepsilon_d <0）、
+\varepsilon_lと\varepsilon_dは符号が逆で大きさが同じ。$この比
+
+\begin{equation}
+\nu =-\frac{\varepsilon_d}{\varepsilon_l}=\frac{|\varepsilon_d|}{|\varepsilon_l|}
+\end{equation}
+
+をその物質のポアソン比という。
+
+平行部の厚さ$t、幅w(断面積A=tw)の平行試験片に荷重Fを加えた時の引張方向のひずみが\varepsilon_l ならヤング率Eは$
+
+\begin{equation}
+E=\frac{\sigma}{\varepsilon_l}=\frac{F}{A} \frac{1}{\varepsilon_l}=\frac{F}{tw\varepsilon_l}
+\end{equation}
+
+試験片の周方向のひずみを$\varepsilon_d$とすると
+
+\begin{equation}
+\nu=-\frac{\varepsilon_d}{\varepsilon_l}=\frac{|\varepsilon_d|}{|\varepsilon_l|}
+\end{equation}
+
+ゆえに、右辺の各量を測れば$E,\nu$は求まる。この実験では、引張方向のひずみ$\varepsilon_l$と周方向のひずみ
+$\varepsilon_d$をそれぞれ一枚のひずみゲージで測定する。荷重$F$は万能試験機の荷重計の値を読み取る。
+
+　　
+\begin{itemize}
+\item 抵抗線ひずみ計の原理
+\end{itemize}
+
+抵抗線ひずみ計の原理は細い金属抵抗線に力が作用し、その長さと断面積が変化すると抵抗値が変化する事を利用するもので、
+ひずみを測定しようとする物質にこの金属線を接着しておけば、金属線は物体と同じひずみを受けて抵抗値が変わり、この変化量によりひずみを知ることができる。
+
+抵抗線の抵抗を$R$とすると
+
+\begin{equation}
+R=\rho \frac{L}{\pi r^2}
+\end{equation}
+
+ただし、$\rho は線の固有抵抗、rは線の半径、Lは線の長さ$
+\newpage
+
+抵抗線が力を受けて$\displaystyle \Delta L、抵抗値が\Delta Rだけ変化したとすると、ポアソン比を\nu として\frac{\Delta L}{L}<<1$の時、次の関係式が(5)式から得られる。
+
+\begin{equation}
+K_s=\frac{\frac{\Delta R}{R}}{\frac{\Delta L}{L}}\simeq (1+2\nu)
+\end{equation}
+
+(6)式の$K_s$はゲージ率と言われ、この式によりゲージの感度が決まる。
+
+今回用いるひずみゲージのゲージ率$K_s$は軟鋼用が2.11でアルミニウムが2.15
+
+\section{方法}
+
+(1)実験片にはすでにひずみゲージが接着されているので、リード線をひずみ測定器の端子に接続
+
+　　
+
+(2)試験片の測定部の応力が弾性限内にあるように最大荷重$F_{max}$の値を決定する。それには、試験片の断面寸法を測定し、これより最大引張応力が許容応力$\sigma_b$内にあるように$F_{max}$を算出。なお、試験片が降伏しないように荷重の制限をすること。$\sigma_b$は試験片の材質により検討する必要がある。
+
+　　
+
+(3)試験片に約$F_{max}/10$程度の初期荷重を与え、各ゲージのひずみを測定する。以下、荷重を増加させて最大荷重まで同様の操作を繰り返す。
+
+今回の試験条件を下表に示す。
+
+\begin{table}[h]
+  \centering
+    \caption{試験条件}
+    \begin{tabular}{|r|r|r|} \hline
+    材料 & 軟鋼 & アルミニウム \\ \hline
+初期荷重(kN) & 5.0 & 1.0 \\ \hline
+階段荷重(kN) & 2.5 & 1.0 \\ \hline
+最大荷重(kN) & 25 & 10 \\ \hline
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+　　
+
+(4)測定値をグラフ用紙にプロットし、降伏が起きていないか、測定誤りがないか確認しながら測定する。
+
+(5)ひずみの測定値を以下の式で補正する。また、応力も求めて置き表を作る。
+\begin{equation}
+\varepsilon'=\frac{2.00}{K_s}\times \varepsilon
+\end{equation}
+
+(6)表から縦軸応力$\sigma[MPa]$、横軸補正後ひずみ$|\varepsilon_l'|,|\varepsilon_d'|[\times 10^{-6}]$のグラフを作る。
+\newpage
+
+\section{結果}
+
+(1)試験結果のまとめ
+
+・試験片寸法
+
+軟鋼(S45C)とアルミニウム(A2024)の寸法を下表に示す。
+
+\begin{table}[h]
+  \centering
+    \caption{軟鋼(S45C)とアルミニウム(A2024)の寸法}
+    \begin{tabular}{|r|r|r|} \hline
+     & 軟鋼(S45C) & アルミニウム(A2024) \\ \hline
+幅(mm) & 25.06 & 25.00 \\ \hline
+厚さ(mm) & 5.92 & 5.00 \\ \hline
+断面積($mm^2$) & 148 & 125 \\ \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+・試験結果表
+
+以下の表3、表4はそれぞれ軟鋼とアルミニウムの試験結果表である。ただし、$\varepsilon_lは縦方向のひずみの測定値、\varepsilon_l'は縦方向のひずみの補正値、\varepsilon_dは横方向のひずみの測定値、\varepsilon_d'は横方向のひずみの補正値$とする。
+
+\begin{table}[h]
+  \centering
+    \caption{軟鋼(S45C)の試験結果}
+    \begin{tabular}{|r|r|r|r|r|r|} \hline
+荷重F[kN] & 応力$\sigma$[MPa] & 測定値$\varepsilon_l$[$\times 10^{-6}$] & 補正値$\varepsilon_l$'[$\times 10^{-6}$] & 測定値$\varepsilon_d$[$\times 10^{-6}$] & 測定値$\varepsilon_d$'[$\times 10^{-6}$] \\ \hline
+4.8 & 32.4 & 172 & 163 & -48 & -45 \\ \hline
+7.22 & 48.8 & 258 & 245 & -70 & -66 \\ \hline
+9.71 & 65.6 & 343 & 325 & -92 & -87 \\ \hline
+12.17 & 82.2 & 430 & 408 & -113 & -107 \\ \hline
+14.63 & 98.9 & 517 & 490 & -136 & -129 \\ \hline
+17.1 & 116 & 605 & 573 & -155 & -147 \\ \hline
+19.57 & 132 & 692 & 656 & -178 & -169 \\ \hline
+22.02 & 149 & 772 & 738 & -200 & -190 \\ \hline
+24.5 & 166 & 864 & 819 & -222 & -210 \\ \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+\newpage
+
+\begin{table}[h]
+  \centering
+    \caption{アルミニウム(A2024)の試験結果}
+    \begin{tabular}{|r|r|r|r|r|r|} \hline
+    荷重F[kN] & 応力$\sigma$[MPa] & 測定値$\varepsilon_l$[$\times 10^{-6}$] & 補正値$\varepsilon_l$'[$\times 10^{-6}$] & 測定値$\varepsilon_d$[$\times 10^{-6}$] & 測定値$\varepsilon_d$'[$\times 10^{-6}$] \\ \hline
+    0.993 & 7.94 & 113 & 105 & -38 & -35 \\ \hline
+1.981 & 15.8 & 230 & 214 & -77 & -72 \\ \hline
+2.956 & 23.6 & 345 & 321 & -115 & -107 \\ \hline
+3.937 & 31.5 & 460 & 428 & -151 & -140 \\ \hline
+4.931 & 39.4 & 577 & 537 & -189 & -176 \\ \hline
+5.918 & 47.3 & 692 & 644 & -228 & -212 \\ \hline
+6.912 & 55.3 & 810 & 753 & -266 & -247 \\ \hline
+7.906 & 63.2 & 927 & 862 & -304 & -283 \\ \hline
+8.893 & 71.1 & 1044 & 971 & -342 & -318 \\ \hline
+9.887 & 79.1 & 1163 & 1.08$\times 10^{3}$ & -378 & -352 \\ \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+(2)試験結果のグラフ
+
+Excelを用いてつくった試験結果のグラフを下に示す。ただし、破線は最小二乗法を用いて求めた直線の延長線である。グラフのわきに書いてある式がその直線の式である。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{軟鋼グラフ.jpg}
+\caption{軟鋼　応力-ひずみグラフ}
+\end{figure}%
+\newpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{アルミグラフ.jpg}
+\caption{アルミニウム　応力-ひずみグラフ}
+\end{figure}%
+
+\section{考察および課題}
+
+・課題
+
+1)初期荷重から最大荷重までのデータを用いて式以下の式の係数$a,c$を最小二乗法で決定し、ヤング率とポアソン比を求める。
+
+\begin{equation}
+縦方向　\sigma =a|\varepsilon_l'|+b
+\end{equation}
+\begin{equation}
+横方向　\sigma =c|\varepsilon_d'|+d
+\end{equation}
+ヤング率$E$は式(8)の係数aで、ポアソン比$\nu は\nu =a/c$　ただし、今回のグラフは縦軸がMPa、横軸が$\times 10^{-6}$となっているので傾きにあたるaの単位はa$\times 10^{6}[Pa]/10^{-6}=a\times 10^{12}[Pa]=a\times 10^{3}$[GPa]となる。これはcでも同じ。
+
+軟鋼での式(8)(9)は、図1に書いてある式より縦方向$\sigma =0.2032|\varepsilon_l'|-0.7179$、\\
+横方向$\sigma =0.8102|\varepsilon_d'|-4.5371$
+
+　　
+
+したがって軟鋼でのヤング率は203GPa、ポアソン比は$\displaystyle \frac{203}{810}\simeq$0.251
+
+　　
+
+アルミニウムでの式(8)(9)は、図2に書いてある式より縦方向$\sigma =0.0731|\varepsilon_l'|+0.212$、
+横方向$\sigma =0.209|\varepsilon_d'|-0.2079$
+
+　　
+
+したがってアルミニウムでのヤング率は73.1GPa、ポアソン比は$\displaystyle \frac{73.1}{209}\simeq$0.350
+\newpage
+2)体積弾性率$k$と剛体率$n$を以下の式から求める。
+
+\begin{equation}
+k=\frac{E}{3(1-2\nu)}　[GPa]
+\end{equation}
+\begin{equation}
+n=\frac{E}{2(1+\nu)}　[GPa]
+\end{equation}
+
+・軟鋼の体積弾性率$k$と剛体率$n$
+
+$\displaystyle k=\frac{203}{3(1-2\times 0.251)}\simeq135$GPa　　$\displaystyle n=\frac{203}{2(1+0.251)}\simeq$81.1GPa
+
+・アルミニウムの体積弾性率$k$と剛体率$n$
+
+$\displaystyle k=\frac{73.1}{3(1-2\times 0.350)}\simeq81.2$GPa　　$\displaystyle n=\frac{73.1}{2(1+ 0.350)}\simeq27.1$GPa
+
+　　
+
+3)弾性定数を理科年表の値と比較
+
+実験で得た値と理科年表の値を比較する。まず理科年表の値を下表に示す。
+
+\begin{table}[h]
+  \centering
+    \caption{理科年表の値の表}
+    \begin{tabular}{|r|r|r|r|r|} \hline
+     & ヤング率[GPa] & ポアソン比 & 体積弾性率[Gpa] & 剛体率[GPa] \\ \hline
+軟鋼 & 211.4 & 0.293 & 169.8 & 81.6 \\ \hline
+アルミニウム & 70.3 & 0.345 & 75.5 & 26.1 \\ \hline
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+測定値は下表
+
+\begin{table}[h]
+  \centering
+    \caption{測定値の値}
+    \begin{tabular}{|r|r|r|r|r|} \hline
+     & ヤング率[GPa] & ポアソン比 & 体積弾性率[Gpa] & 剛体率[GPa] \\ \hline
+軟鋼 & 203 & 0.251 & 135 & 81.1 \\ \hline
+アルミニウム & 73.1 & 0.350 & 81.2 & 27.1 \\ \hline
+    
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+次のような式で理科年表の値と測定値を比較する（相対誤差）。
+
+\begin{equation}
+\frac{|理-測|}{理}\times 100 [\%]　ただし、理は理科年表の値、測は測定値
+\end{equation}
+
+\begin{table}[h]
+  \centering
+    \caption{理論値（理科年表）と測定値の相対誤差}
+    \begin{tabular}{|r|r|r|r|r|} \hline
+     & ヤング率[\%] & ポアソン比[\%] & 体積弾性率[\%] & 剛体率[\%] \\ \hline
+軟鋼 & 3.97 & 14.3 & 20.5 & 0.613 \\ \hline
+アルミニウム & 3.98 & 1.45 & 7.55 & 3.83 \\ \hline
+    \end{tabular}
+    \label{tab:r_1}
+\end{table}
+
+ヤング率の誤差が軟鋼とアルミでほとんど同じ値のなったのは偶然ではなく、この実験では約4\% 程度の測定誤差が出てしまうということだと考えられる。また、軟鋼はヤング率の誤差よりもポアソン比の誤差が大きいが、これは横方向の計測に問題があった事が分かる。
+なぜなら、ヤング率は縦方向の計測の情報のみで測定されているからである。同様に、アルミニウムでは横方向の測定が縦方向より精度良く行われたことが分かる。体積弾性率と剛体率で誤差が違うのは、体積弾性率ではポアソン比に6がかかっており、それに対して剛体率では２がかかっている事により、それぞれの誤差の大きさが変わったためだと考えられる。
+
+\newpage
+・鉄とアルミでヤング率が2倍以上違う理由
+
+アルミは鉄に比べてやわらかいため、鉄と同じ応力を加えると鉄よりゆがむ。したがってアルミのヤング率が小さくなり、鉄のヤング率が大きくなり、2倍以上の違いが生まれる。
+
+では、なぜアルミは鉄に比べてやわらかいのだろうか
+
+金属の硬さというのはその物質の結晶構造が重要になる。アルミの結晶構造は面心立方格子で滑りやすく（つまりやわらかい）、一方鉄は耐心立方格子で面心立方格子より滑りにくい。そのため、アルミの方が軟らかい。
+
+　　
+
+・応力緩和が鉄の方が大きい理由
+
+軟鋼は強度が高く、延性が低いため、一度引っ張っても戻ろうとする力がアルミより大きいため応力緩和が大きくなった。
+
+
+\begin{thebibliography}{9}
+\item　NIC Autotec,Inc. 「【今月のまめ知識 第65回】 金属の硬さ」　2018/8/27\\
+http://alfaframe.com/mame/20471.html　閲覧日2021/5/16
+  
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}

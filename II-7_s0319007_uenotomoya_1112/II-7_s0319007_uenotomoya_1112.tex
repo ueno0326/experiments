@@ -1,0 +1,363 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\graphicspath{{ピクチャ/}}
+\usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\begin{document}
+
+\title{\huge II-7 超音波音速測定}
+\date{}
+\maketitle
+
+\begin{flushright}
+\vspace{11cm}\Large
+所属:物理・材料理工学科\\数理・物理コース\\
+学籍番号：s0319007\\
+氏名:上野智也\\
+共同実験者：上野健斗\\片野峻太郎\\川瀬悠太\\
+実験実施日：2021/11/10\\
+レポート提出日:2021/11/15
+\end{flushright}
+
+\thispagestyle{empty}
+
+\newpage
+
+\section{目的}
+
+NaCl単結晶の[100]方向に伝搬する縦波超音波を用いて結晶中における音速及び吸収を測定して、室温における弾性定数
+$C_{11}$と吸収定数$\alpha_{11}$を求める。
+
+\section{装置}
+
+図1に超音波測定の概念図を示す。高周波発生装置で発生した高周波正弦連続波はゲートアンプでパルス状に切り取られる。高周波パルス信号は方向性ブリッヂを介して電機音響変換素子に送られて、そこで高周波電気信号は超音波に変換される。試料を伝搬した超音波は結晶界面で反射を繰り返し再び音響変換素子にに到達した音波信号は電気信号に変換されアンプ系で信号を増幅しオシロスコープに映される。図2に試料中を伝搬し反射を繰り返す超音波の様子とオシロスコープに映されるエコー系列を示す。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{1.jpg}
+\caption{超音波測定装置の概念図}
+\end{figure}%
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{2.jpg}
+\caption{超音波の様子とオシロスコープに映されるエコー系列}
+\end{figure}%
+
+\newpage
+
+\section{実験方法}
+
+(1)空気中の音速測定をする。手順は以下の通り
+
+\ajMaru1 ピストルを撃ち、Detectorが音をマイクで受け取るとタイマーがスタート
+
+\ajMaru2 Reflectorが音を検知すると光を発する
+
+\ajMaru3 Detectorが光を検知するとタイマーがストップ(この時Detectorに表示されている時間が計測時間$\Delta t$)
+
+\ajMaru4 DetectorとReflectorの経路$L$を測り、以下の式に$\Delta tとLを$代入して空気中の音速$v$　(m/s)を求める
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{dl.jpg}
+\caption{空気中の音速測定}
+\end{figure}%
+
+DetectorからReflectorまでは音速$v$で進む(往路)がReflectorからDetectorまでは光速で進む(復路)。光速は音速$v$に比べて充分に大きいため、計測時間が音が経路$L$を進むのにかかった時間としてよい。したがって、音速$v$を求める式は以下のように与えられる
+
+\begin{center}
+$\displaystyle v=\frac{L}{\Delta t}$
+\end{center}
+
+(2)高周波発生装置の信号をオシロスコープで取り出してその周波数$f$と振幅の電圧$\Delta y$を計測する。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{sin.jpg}
+\caption{高周波発生装置の信号:$\Delta y$が振幅}
+\end{figure}%
+
+\newpage
+
+(3)ゲートアンプを通過した信号を取り出してそのパルス幅$x'$とパルス間隔$\Delta x'$を測定する。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4cm]{pulse.jpg}
+\caption{パルス幅とパルス間隔}
+\end{figure}%
+
+(4)パルスエコー系列を観測し、エコー間隔(時間:$t$)とエコー強度($I_1,I_2,I_3$)を測定する。第1エコーの強度を$I_1$、
+第2エコーの強度を$I_2$、第3エコーの強度を$I_3$とする。第1エコーから第2エコーまでのエコー間隔を$\Delta t_1$、第2エコーから第3エコーまでのエコー間隔を$\Delta t_2$、第3エコーから第4エコーまでのエコー間隔を$\Delta t_3$とする。
+
+(5)試料中の縦波の音速$v$をエコー間隔と試料長から計算して弾性定数($C_{11}$)を求める。また、エコー強度から単位長さ当たりの吸収係数$\alpha_{11}$を求める。
+
+\section{結果と課題}
+
+(1)空気中の音速を測定したところ、経路L=5.88 m、時間$\Delta$t=0.0164 sとなった。したがって気体中の音速$v$は
+\begin{center}
+$\displaystyle v=\frac{L}{\Delta t}=\frac{2\times5.88}{0.0164}=358.5365・・・\simeq359$ m/s
+\end{center}
+と求められる。
+
+
+(2)測定した信号から周波数$f$ (MHz)と振幅$\Delta y$ (V)を求めると、以下のようになった
+
+\begin{center}
+$f$=9.106 MHz,$\Delta y$=1.17 V
+\end{center}
+
+(3)ゲートアンプを通過し、取り出した信号のパルス幅$x'$とパルス間隔$\Delta x'$は計測した結果以下のようになった
+
+\begin{center}
+$x'=$840 ns,$\Delta x'$= 32.2 μs
+\end{center}
+
+\newpage
+
+(4)パルスエコー系列を観測するとエコー間隔$\Delta t_i$とエコー強度$I_i$が以下のようになっていた。
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\columnwidth}
+  \centering
+    \begin{displaymath}
+\left\{
+\begin{array}{l}
+\Delta t_1=2.4 $μs$\\
+\Delta t_2=2.1 $μs$\\
+\Delta t_3=2.8 $μs$
+\end{array}
+\right.
+\end{displaymath}
+  \end{minipage}
+  \begin{minipage}{0.4\columnwidth}
+  \centering
+   \begin{displaymath}
+\left\{
+\begin{array}{l}
+I_1=645.75 $mV$\\
+I_2=100 $mV$\\
+I_3=137.5 $mV$
+\end{array}
+\right.
+\end{displaymath}
+  
+  \end{minipage}
+\end{figure}
+
+以下の図はパルスエコー($\Delta t_3$,$I_3$)のときのオシロスコープでの信号。縦軸がエコー強度で、横軸がエコー間隔である。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm,angle=90]{wave.pdf}
+\caption{パルスエコー($\Delta t_3$,$I_3$)の信号}
+\end{figure}%
+
+
+(5)試料中の縦波の音速$v$を求める。
+
+図2から経路が$2l$、エコー間隔$\Delta t_1,\Delta t_2,\Delta t_3$の平均を$\Delta t$とする。(ただし、$l$は試料の長さ)
+
+\begin{center}
+$\displaystyle \Delta t = \frac{2.4+2.1+2.8}{3} μs \simeq 2.43 \times 10^{-6}$ s
+\end{center}
+
+$l$を測定したところ$l=5.1$ mm=$5.1 \times 10^{-3}$mであった。
+
+したがって、試料中の縦波の音速$v$は
+
+\begin{center}
+$\displaystyle v=\frac{2l}{\Delta t}=\frac{2\times 5.1 \times 10^{-3}}{2.43 \times 10^{-6}}\simeq 4200$ m/s
+\end{center}
+と求められる。
+
+次に弾性係数$C_{11}$を求める。
+
+弾性係数$C_{11}$は以下の式によって与えられる。
+
+\begin{center}
+$C_{11} = \rho v^2$
+\end{center}
+ここで、$\rho$は試料の密度であり、今回の試料(NaCl)は20℃で2.164 g/cm$^3$=$2.164 \times 10^3$ kg/m$^3$である。
+
+したがって、弾性係数$C_{11}$は
+
+\begin{center}
+$\displaystyle C_{11} = 2.164 \times 10^3 \times (\frac{2\times 5.1 \times 10^{-3}}{2.43 \times 10^{-6}})^2$
+
+$= 3.81280・・・\times 10^{10}$ kg/(m・s$^2$)$\simeq 38$ GPa
+\end{center}
+
+と求められる。
+
+最後に単位長さ当たりの吸収係数$\alpha_{11}$を求める。
+
+まずエコー強度の比を求める。
+
+\begin{center}
+$\displaystyle \frac{I_n}{I_{n+1}} =\frac{\frac{I_1}{I_2}+\frac{I_2}{I_3}}{2}=\frac{\frac{643.75}{100}+\frac{100}{137.5}}{2}
+=3.5823・・・$
+\end{center}
+
+吸収係数$\alpha_{11}$は以下の式で与えられる。
+
+\begin{center}
+$\displaystyle \alpha_{11}＝\frac{20\log (\frac{I_n}{I_{n+1}})}{2l}$ dB/cm　(ただし、$\log$は常用対数)
+\end{center}
+
+上の式に必要な数値を代入すると
+
+\begin{center}
+$\displaystyle \alpha_{11}＝\frac{20\log (3.5823・・・)}{2\times 0.51} \simeq10.866$ dB/cm
+\end{center}
+
+また、単位時間当たりの吸収係数$\beta_{11}$は以下の式で与えられる。
+
+\begin{center}
+$\displaystyle \beta_{11}＝\frac{20\log (\frac{I_n}{I_{n+1}})}{\Delta t}$ dB/s　(ただし、$\log$は常用対数)
+\end{center}
+
+上の式に必要な数値を代入すると
+
+\begin{center}
+$\displaystyle \beta_{11}＝\frac{20\log (3.5823・・・)}{2.43\times 10^{-6}} =4.5548・・・\times 10^6\simeq 4.56$ MdB/s
+\end{center}
+
+以上から、今回の実験の目的であった室温における弾性定数$C_{11}$と吸収定数$\alpha_{11}$を求めることができた。
+
+\section{考察}
+
+(1)空気中の音速測定の実測値と理論値の比較および誤差原因
+
+空気中の音速は以下の式で表される。
+
+\begin{center}
+$v_理=331.5 + 0.6T$ (m/s)
+\end{center}
+
+ここで、$T$は摂氏(℃)である。実験した部屋の温度が20℃であったと仮定すると、空気中の音速の理論値は
+
+\begin{center}
+$v_理=343.15$ m/s
+\end{center}
+
+今回の実測値を$v_実$とすると、$v_実$=359 m/sである。以下の式を用いて相対誤差を求めると
+
+\begin{center}
+$\displaystyle 相対誤差=\frac{|実測値-理論値|}{理論値}\times 100 (\%)$
+
+$\displaystyle 相対誤差=\frac{|359-343.15|}{343.15}\times100=4.62\%$
+\end{center}
+
+したがって、実測値と理論値との比較ができた。
+
+　　
+
+誤差の原因として以下のものが挙げられる。
+
+・今回の実験で用いた計測器は音を受け取ってから時間の計測をはじめ、光を受け取り計測を終了するものであった。
+しかし、実験室中は蛍光灯の光や自然光が入り込んでおり、光の受け取りで誤差が発生しやすい状況だったといえる。
+
+　　
+
+・音源が計測器に充分近くなく計測を始める時間が遅れてしまい誤差が生じたとも考えられる。
+
+　　
+
+以上の誤差を改善するには完全遮光の部屋や箱の中で実験を行うことや計測器の音を感知する部分に音源をくっつけてしまい遠隔操作で音を発するなどが考えられる。
+
+　　
+
+(2)弾性係数$C_{11}$の実測値を理論値と比較及び誤差原因を考える。
+
+弾性係数の理論値は
+
+\begin{center}
+$C_理=48.5$ GPa
+\end{center}
+
+実測値は$C_実=38$GPaである。考察(1)と同様に相対誤差を求めると
+
+\begin{center}
+$\displaystyle 相対誤差=\frac{|38-48.5|}{48.5}\times100\simeq 21.6 \%$
+\end{center}
+
+したがって実測値と理論値の比較ができた。
+
+　　
+
+誤差原因として考えられるのは、試料であるNaCl単結晶の経年劣化である。TAによるとこの実験で使用したNaCl単結晶は長年使用しており、経年劣化している可能性があると考えた。長年使用しているうちに単結晶表面が削れてパルスエコー系列の観測で誤差が生じて生じてしまったり、体積が変化して密度が変わってしまったということが誤差原因として考えられる。
+
+NaCl単結晶を状態の良いものにすればこれらの誤差原因は解決する。
+
+　　
+
+(3)なぜ固体の方が音速が速いのか
+
+固体中の音速$v_s$と気体中の音速$v_g$は以下の式で与えられる。
+
+\begin{center}
+$\displaystyle v_s=\sqrt{\frac{E}{\rho}},v_g=\sqrt{\frac{K}{\rho}}$
+\end{center}
+
+ここで、$Eは固体のヤング率、Kは気体の体積弾性率、\rho は音速の媒質の密度である。20℃、1気圧下での$Naclのヤング率は$E=39.98$GPa、密度は$\rho=2.164$g/cm$^3$。20℃、1気圧下での空気の体積弾性率は$K=1.4\times 10^5Pa、密度は\rho=1.29$kg/m$^3$=1.29$\times 10^{-3}$g/cm$^3$
+
+というように、一般的に空気の体積弾性率より固体のヤング率の方が大きく、その大きさの違いはそれぞれの密度で割ったところであまり縮まらないため、固体中の音速の方が速い。
+
+ヤング率や体積弾性率は物質の硬さに関する量であり、数値が大きいほど固い。すなわち、固体の方が音の媒質である原子や分子どうしが固定されており、原子の振動が隣の原子に伝わりやすく、音速が空気中より速くなる。
+
+\newpage
+
+\section{感想}
+
+TAさんの説明やスライドが分かりやすく、実験内容の理解がしやすかった。しかし、同じ部屋で別の実験の説明も行われていてうるさくて集中できなかったり、説明が聞こえないところがあった。できれば別々の部屋で実験を行ってほしかった。
+
+\begin{thebibliography}{9}
+\item 佐野理著　連続体の力学　2000年　裳華房
+
+\item 株式会社ネオトロン　NaCl 閲覧日:2021/11/12
+\\URL:\url{http://www.neotron.co.jp/crystal/4/NaCl.html}
+  
+\item 小野測器　音の速さ　閲覧日:2021/11/12
+\\URL:\url{https://www.onosokki.co.jp/HP-WK/nakaniwa/keisoku/otonohayasa.htm}
+
+\item 機械工学事典　密度　閲覧日:2021/11/12
+\\URL:\url{https://www.jsme.or.jp/jsme-medwiki/09:1012584}
+  
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
